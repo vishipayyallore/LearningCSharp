@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.CSharp.DataModels"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.CSharp.IDataModels", "Learning.CSharp.IDataModels\Learning.CSharp.IDataModels.csproj", "{6B602CBA-59E0-4CA5-99C1-EB3E0085A023}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.CSharp.IDataRepositories", "Learning.CSharp.IDataRepositories\Learning.CSharp.IDataRepositories.csproj", "{7D0FEFBE-C40E-4E3C-9105-2BE4E386D522}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{6B602CBA-59E0-4CA5-99C1-EB3E0085A023}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B602CBA-59E0-4CA5-99C1-EB3E0085A023}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B602CBA-59E0-4CA5-99C1-EB3E0085A023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D0FEFBE-C40E-4E3C-9105-2BE4E386D522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D0FEFBE-C40E-4E3C-9105-2BE4E386D522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D0FEFBE-C40E-4E3C-9105-2BE4E386D522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D0FEFBE-C40E-4E3C-9105-2BE4E386D522}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,6 @@ Global
 		{4F10EDE1-EADB-442D-B819-0C86D2FCB489} = {2386AD4C-09D2-4E75-B4A8-8A737E8A2670}
 		{47658C9C-2E6C-49CA-9C06-BF8C995A350E} = {596406A4-9411-41DF-910E-80FA8687DFEF}
 		{6B602CBA-59E0-4CA5-99C1-EB3E0085A023} = {596406A4-9411-41DF-910E-80FA8687DFEF}
+		{7D0FEFBE-C40E-4E3C-9105-2BE4E386D522} = {DEB27226-5804-491A-A22F-6671D001E78B}
 	EndGlobalSection
 EndGlobal

@@ -10,28 +10,45 @@ namespace Learning.CSharp.Utilities
         static readonly string[] Consonants = { "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "l", "n", "p", "q", "r", "s", "sh", "zh", "t", "v", "w", "x" };
         static readonly string[] Vowels = { "a", "e", "i", "o", "u", "ae", "y" };
         static readonly Random RandomObject = new Random();
+        static readonly StringBuilder Name = new StringBuilder(100);
         #endregion
 
         #region Methods.
-        public static string GenerateName(int length = 12)
+        public static string GenerateName(int length = 8)
         {
-            var name = new StringBuilder(100);
-            var iCtr = 2; //b tells how many times a new letter has been added. It's 2 right now because the first two letters are already in the name.
+            GetNamePart(length/2);
+            AddSpaceInName();
+            GetNamePart(length/2);
 
-            name.Append(GetConsonant(true));
-            name.Append(GetVowel());
+            return Name.ToString();
+        }
+
+        private static void GetNamePart(int length)
+        {
+            GetFirstPart();
+            GetRemainingName(length);
+        }
+
+        private static void GetRemainingName(int length)
+        {
+            var iCtr = 0;
             while (iCtr <= length)
             {
-                name.Append(GetConsonant());
-                if (iCtr > 5)
-                {
-                    name.Append(" ");
-                    name.Append(GetConsonant(true));
-                }
-                name.Append(GetVowel());
+                Name.Append(GetConsonant());
+                Name.Append(GetVowel());
                 iCtr += 2;
             }
-            return name.ToString();
+        }
+
+        private static void GetFirstPart()
+        {
+            Name.Append(GetConsonant(true));
+            Name.Append(GetVowel());
+        }
+
+        private static void AddSpaceInName()
+        {
+            Name.Append(" ");
         }
         #endregion
 
