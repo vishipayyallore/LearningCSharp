@@ -16,3 +16,11 @@
 /Learning.CSharp.Day1/bin/Debug
 /Learning.CSharp.DataModels/obj/Debug
 /.vs/LearningCSharp/v14/.suo
+/Learning.CSharp..IDataRepositories/obj/Debug
+/Learning.CSharp.DataModels/bin/Debug
+/Learning.CSharp.IDataModels/bin/Debug
+/Learning.CSharp.IDataRepositories/obj/Debug
+/packages
+/Learning.CSharp.MongoStore/obj/Debug
+/Learning.CSharp.MongoDbDataStore/obj/Debug
+/Learning.CSharp.DataRepositories/obj/Debug
