@@ -30,6 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MongoDB.Bson, Version=2.0.1.27, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.0.1\lib\net45\MongoDB.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.0.1.27, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.0.1\lib\net45\MongoDB.Driver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.0.1.27, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.0.1\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,6 +54,27 @@
   <ItemGroup>
     <Compile Include="ProductDataRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Learning.CSharp.DataModels\Learning.CSharp.DataModels.csproj">
+      <Project>{47658C9C-2E6C-49CA-9C06-BF8C995A350E}</Project>
+      <Name>Learning.CSharp.DataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Learning.CSharp.IDataModels\Learning.CSharp.IDataModels.csproj">
+      <Project>{6B602CBA-59E0-4CA5-99C1-EB3E0085A023}</Project>
+      <Name>Learning.CSharp.IDataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Learning.CSharp.IDataRepositories\Learning.CSharp.IDataRepositories.csproj">
+      <Project>{7D0FEFBE-C40E-4E3C-9105-2BE4E386D522}</Project>
+      <Name>Learning.CSharp.IDataRepositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Learning.CSharp.MongoDbDataStore\Learning.CSharp.MongoDbDataStore.csproj">
+      <Project>{1DCBF0B5-DF35-4B24-96C6-44C623E8F62F}</Project>
+      <Name>Learning.CSharp.MongoDbDataStore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

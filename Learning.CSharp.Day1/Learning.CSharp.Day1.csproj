@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infrastructure\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -51,9 +50,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Infrastructure\" />
     <Folder Include="Sample1\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Learning.CSharp.DataModels\Learning.CSharp.DataModels.csproj">
+      <Project>{47658C9C-2E6C-49CA-9C06-BF8C995A350E}</Project>
+      <Name>Learning.CSharp.DataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Learning.CSharp.DataRepositories\Learning.CSharp.DataRepositories.csproj">
+      <Project>{A86AEA07-D417-412B-99F2-8ADE53F3695D}</Project>
+      <Name>Learning.CSharp.DataRepositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Learning.CSharp.IDataModels\Learning.CSharp.IDataModels.csproj">
+      <Project>{6B602CBA-59E0-4CA5-99C1-EB3E0085A023}</Project>
+      <Name>Learning.CSharp.IDataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Learning.CSharp.IDataRepositories\Learning.CSharp.IDataRepositories.csproj">
+      <Project>{7D0FEFBE-C40E-4E3C-9105-2BE4E386D522}</Project>
+      <Name>Learning.CSharp.IDataRepositories</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Learning.CSharp.Utilities\Learning.CSharp.Utilities.csproj">
       <Project>{93609007-1EA7-48D4-8D9B-AB5E036BAE41}</Project>
       <Name>Learning.CSharp.Utilities</Name>

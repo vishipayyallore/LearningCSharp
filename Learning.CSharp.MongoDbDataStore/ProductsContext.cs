@@ -5,6 +5,7 @@ using MongoDB.Driver;
 
 namespace Learning.CSharp.MongoDbDataStore
 {
+
     public class ProductsContext
     {
         #region Properties.
@@ -20,7 +21,8 @@ namespace Learning.CSharp.MongoDbDataStore
         }
 
         #region Properties
-        public IMongoCollection<Product> Doors => _mongoDatabase.GetCollection<Product>(_productsCollectionName);
+        public IMongoCollection<Product> Products => _mongoDatabase.GetCollection<Product>(_productsCollectionName);
         #endregion
     }
+
 }
