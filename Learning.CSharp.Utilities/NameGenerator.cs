@@ -13,7 +13,7 @@ namespace Learning.CSharp.Utilities
         #endregion
 
         #region Methods.
-        public static string GenerateName(int length = 10)
+        public static string GenerateName(int length = 12)
         {
             var name = new StringBuilder(100);
             var iCtr = 2; //b tells how many times a new letter has been added. It's 2 right now because the first two letters are already in the name.
@@ -23,6 +23,11 @@ namespace Learning.CSharp.Utilities
             while (iCtr <= length)
             {
                 name.Append(GetConsonant());
+                if (iCtr > 5)
+                {
+                    name.Append(" ");
+                    name.Append(GetConsonant(true));
+                }
                 name.Append(GetVowel());
                 iCtr += 2;
             }
