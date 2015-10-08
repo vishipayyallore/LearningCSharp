@@ -1,4 +1,6 @@
 ﻿using System;
+using Learning.CSharp.DataModels;
+using Learning.CSharp.DataRepositories;
 using Learning.CSharp.Utilities;
 
 namespace Learning.CSharp.Day1
@@ -11,11 +13,17 @@ namespace Learning.CSharp.Day1
             try
             {
                 Console.WriteLine(NameGenerator.GenerateName());
+                var productsRepository = new ProductsRepository();
+                var product = new Product
+                {
+                    Name = NameGenerator.GenerateName(),
+                    Price =  102.3M
+                };
+                productsRepository.Add(product).Wait();
             }
-            catch (Exception)
+            catch (Exception errorObject)
             {
-                
-                throw;
+                Console.WriteLine("\nError: {0}", errorObject.Message);
             }
             Console.WriteLine("\n\nPress any key ...");
             Console.Read();

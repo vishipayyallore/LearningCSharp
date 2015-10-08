@@ -24,3 +24,7 @@
 /Learning.CSharp.MongoStore/obj/Debug
 /Learning.CSharp.MongoDbDataStore/obj/Debug
 /Learning.CSharp.DataRepositories/obj/Debug
+/Learning.CSharp.DataRepositories/bin/Debug
+/Learning.CSharp.IDataRepositories/bin/Debug
+/Learning.CSharp.MongoDbDataStore/bin/Debug
+/Learning.CSharp.MongoStore/bin/Debug
