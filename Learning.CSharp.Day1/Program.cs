@@ -13,15 +13,22 @@ namespace Learning.CSharp.Day1
             Console.ForegroundColor = ConsoleColor.Green;
             try
             {
-                Console.WriteLine(NameGenerator.GenerateName());
-
+                var startTime = DateTime.UtcNow;
                 var productsRepository = new ProductsRepository();
-                var product = new Product
+
+                for (var iCtr = 0; iCtr <= 10000; iCtr++)
                 {
-                    Name = NameGenerator.GenerateName(),
-                    Price =  102.3M
-                };
-                productsRepository.Add(product).Wait();
+                    var product = new Product
+                    {
+                        Name = NameGenerator.GenerateName(),
+                        Price = 102.3M
+                    };
+                    Console.WriteLine("{0}. Creating new Product {1}", iCtr, product.Name);
+                    productsRepository.Add(product).Wait();
+                }
+                Console.WriteLine("{0} : {1}", startTime, DateTime.UtcNow);
+                //Console.WriteLine(NameGenerator.GenerateName());
+                
             }
             catch (Exception errorObject)
             {
