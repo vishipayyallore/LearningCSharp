@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using Learning.CSharp.DataModels;
@@ -15,8 +16,16 @@ namespace Learning.CSharp.DataRepositories
 
         public ProductsRepository()
         {
-            //TODO: Using Dependency Injenction
-            _productsContext = new ProductsContext();
+            try
+            {
+                //TODO: Using Dependency Injenction
+                _productsContext = new ProductsContext();
+            }
+            catch (Exception errorObject)
+            {
+                Console.WriteLine("\nError: {0}", errorObject.Message);
+            }
+            
         }
 
         public IEnumerable<Product> List { get; }

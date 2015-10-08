@@ -60,9 +60,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Learning.CSharp.DataModels\Learning.CSharp.DataModels.csproj">
       <Project>{47658C9C-2E6C-49CA-9C06-BF8C995A350E}</Project>
       <Name>Learning.CSharp.DataModels</Name>
@@ -79,6 +76,9 @@
       <Project>{93609007-1EA7-48D4-8D9B-AB5E036BAE41}</Project>
       <Name>Learning.CSharp.Utilities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

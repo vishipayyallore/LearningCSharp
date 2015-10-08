@@ -70,6 +70,10 @@
       <Project>{7D0FEFBE-C40E-4E3C-9105-2BE4E386D522}</Project>
       <Name>Learning.CSharp.IDataRepositories</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Learning.CSharp.MongoDbDataStore\Learning.CSharp.MongoDbDataStore.csproj">
+      <Project>{1DCBF0B5-DF35-4B24-96C6-44C623E8F62F}</Project>
+      <Name>Learning.CSharp.MongoDbDataStore</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Learning.CSharp.Utilities\Learning.CSharp.Utilities.csproj">
       <Project>{93609007-1EA7-48D4-8D9B-AB5E036BAE41}</Project>
       <Name>Learning.CSharp.Utilities</Name>

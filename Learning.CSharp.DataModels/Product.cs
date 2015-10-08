@@ -1,4 +1,6 @@
 ﻿using Learning.CSharp.IDataModels;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Learning.CSharp.DataModels
 {
@@ -18,6 +20,7 @@ namespace Learning.CSharp.DataModels
         }
 
         #region Properties
+        [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
         public string Name { get; set; }

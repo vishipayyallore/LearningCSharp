@@ -1,6 +1,7 @@
 ﻿using System;
 using Learning.CSharp.DataModels;
 using Learning.CSharp.DataRepositories;
+using Learning.CSharp.MongoDbDataStore;
 using Learning.CSharp.Utilities;
 
 namespace Learning.CSharp.Day1
@@ -13,6 +14,7 @@ namespace Learning.CSharp.Day1
             try
             {
                 Console.WriteLine(NameGenerator.GenerateName());
+
                 var productsRepository = new ProductsRepository();
                 var product = new Product
                 {

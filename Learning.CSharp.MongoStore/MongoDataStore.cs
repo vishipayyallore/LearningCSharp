@@ -1,4 +1,5 @@
-﻿using Learning.CSharp.Utilities;
+﻿using System;
+using Learning.CSharp.Utilities;
 using MongoDB.Driver;
 
 namespace Learning.CSharp.MongoStore
@@ -15,12 +16,21 @@ namespace Learning.CSharp.MongoStore
 
         static MongoDataStore()
         {
-            var mongoDbConnectionString = ConfigurationHelper.GetConfigurationValue("MongoDbConnectionString");
-            DataStoreClient = new MongoClient(mongoDbConnectionString);
+            try
+            {
+                var mongoDbConnectionString = ConfigurationHelper.GetConfigurationValue("MongoDbConnectionString");
+                Console.WriteLine(mongoDbConnectionString);
+                DataStoreClient = new MongoClient(mongoDbConnectionString);
 
-            //Data Base
-            var mongoDbDatabaseName = ConfigurationHelper.GetConfigurationValue("MongoDbDatabaseName");
-            DesignPatternDatabase = DataStoreClient.GetDatabase(mongoDbDatabaseName);
+                //Data Base
+                var mongoDbDatabaseName = ConfigurationHelper.GetConfigurationValue("MongoDbDatabaseName");
+                DesignPatternDatabase = DataStoreClient.GetDatabase(mongoDbDatabaseName);
+            }
+            catch (Exception errorObject)
+            {
+                Console.WriteLine("\nError: {0}", errorObject.Message);
+            }
+            
         }
 
         #region Properties
