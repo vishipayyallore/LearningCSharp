@@ -44,6 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Learning.CSharp.DataModels\Learning.CSharp.DataModels.csproj">
+      <Project>{47658C9C-2E6C-49CA-9C06-BF8C995A350E}</Project>
+      <Name>Learning.CSharp.DataModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Learning.CSharp.IDataModels\Learning.CSharp.IDataModels.csproj">
       <Project>{6B602CBA-59E0-4CA5-99C1-EB3E0085A023}</Project>
       <Name>Learning.CSharp.IDataModels</Name>

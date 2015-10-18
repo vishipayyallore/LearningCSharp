@@ -16,8 +16,13 @@ namespace Learning.CSharp.Day1
                 var prodcutsDemo1 = new ProdcutsDemo1();
                 prodcutsDemo1
                     .GenerateProducts()
+                    .SortAndDisplayProducts()
+                    .GenerateProducts(x => x.Price > 2000.0M && x.Price<3000.0M)
+                    .SortAndDisplayProducts()
+                    .GenerateProducts(x => x.Price > 2500.0M && x.Price < 3000.0M)
+                    .SortAndDisplayProducts()
+                    .GenerateProducts(x => x.Price > 2800.0M && x.Price < 3000.0M)
                     .SortAndDisplayProducts();
-
             }
             catch (Exception errorObject)
             {

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
+using Learning.CSharp.DataModels;
 using Learning.CSharp.DataRepositories;
 
 namespace Learning.CSharp.Day1.Sample1
@@ -17,11 +19,13 @@ namespace Learning.CSharp.Day1.Sample1
         }
 
         #region Methods
-        public ProdcutsDemo1 GenerateProducts()
+        public ProdcutsDemo1 GenerateProducts(Func<Product, bool> action  = null)
         {
             _products = new ArrayList();
             var productsRepository = new ProductsRepository();
-            _products.AddRange(productsRepository.List);
+            _products.AddRange(action == null
+                ? productsRepository.List.Result
+                : productsRepository.GetPrdocuts(action).ToList());
             return this;
         }
 

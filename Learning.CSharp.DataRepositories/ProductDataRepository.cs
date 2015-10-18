@@ -25,12 +25,13 @@ namespace Learning.CSharp.DataRepositories
 
         #region Properties.
 
-        public List<Product> List
+        public Task<List<Product>> List
         {
             get
             {
                 var filter = Builders<Product>.Filter.Exists("_id");
-                return _productsContext.Products.FindAsync(filter).Result.ToListAsync().Result; 
+                //return _productsContext.Products.FindAsync(filter).Result.ToListAsync().Result; 
+                return _productsContext.Products.Find(filter).ToListAsync();
             }
         }
         #endregion
@@ -40,6 +41,11 @@ namespace Learning.CSharp.DataRepositories
         {
             await _productsContext.Products.InsertOneAsync(entity);
             return HttpStatusCode.Accepted;
+        }
+
+        public IEnumerable<Product> GetPrdocuts(Func<Product, bool> action)
+        {
+            return List.Result.Where(action);
         }
 
         public void Delete(Product entity)

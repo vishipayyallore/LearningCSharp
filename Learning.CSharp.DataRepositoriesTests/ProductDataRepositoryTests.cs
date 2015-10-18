@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 using Learning.CSharp.DataModels;
 using Learning.CSharp.DataRepositories;
 using Learning.CSharp.Utilities;
@@ -29,7 +30,7 @@ namespace Learning.CSharp.DataRepositoriesTests
         {
             var productsArrayList = new ArrayList();
             var productsRepository = new ProductsRepository();
-            var results = productsRepository.List;
+            var results = productsRepository.List.Result;
             productsArrayList.AddRange(results);
             foreach (var product in productsArrayList)
             {
@@ -41,8 +42,8 @@ namespace Learning.CSharp.DataRepositoriesTests
         public void When_10Products_AreCreated()
         {
             var productsRepository = new ProductsRepository();
-            var currencyGenerator = new CurrencyGenerator();
-            for (var iCtr = 0; iCtr < 10; iCtr++)
+            var currencyGenerator = new CurrencyGenerator(maximumValue: 15000.0);
+            for (var iCtr = 0; iCtr < 1000; iCtr++)
             {
                 var product = new Product
                 {
@@ -52,7 +53,20 @@ namespace Learning.CSharp.DataRepositoriesTests
                 var results = productsRepository.Add(product).Result;
                 Console.WriteLine(results);
             }
+        }
 
+        [TestMethod]
+        public void When_ProductsList_Greaterthan500_IsRetrieved()
+        {
+            var productsArrayList = new ArrayList();
+            var productsRepository = new ProductsRepository();
+            var results = productsRepository.GetPrdocuts(x => (x.Price > 1800 && x.Price<3000));
+            //var refined = results.Where(x => x.Price > 700).ToList();
+            //productsArrayList.AddRange(results);
+            foreach (var product in results)
+            {
+                Console.WriteLine(product.ToString());
+            }
         }
     }
 }
