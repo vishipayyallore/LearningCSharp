@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Learning.CSharp.DataModels;
 using Learning.CSharp.DataRepositories;
 using Learning.CSharp.Utilities;
@@ -22,5 +23,19 @@ namespace Learning.CSharp.DataRepositoriesTests
             var results = productsRepository.Add(product).Result;
             Console.WriteLine(results);
         }
+
+        [TestMethod]
+        public void When_ProductsList_IsRetrieved()
+        {
+            var productsArrayList = new ArrayList();
+            var productsRepository = new ProductsRepository();
+            var results = productsRepository.List;
+            productsArrayList.AddRange(results);
+            foreach (var product in productsArrayList)
+            {
+                Console.WriteLine(product.ToString());
+            }
+        }
+
     }
 }

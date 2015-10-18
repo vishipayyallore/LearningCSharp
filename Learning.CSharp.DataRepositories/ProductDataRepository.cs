@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Learning.CSharp.DataModels;
 using Learning.CSharp.IDataRepositories;
 using Learning.CSharp.MongoDbDataStore;
+using MongoDB.Driver;
 
 namespace Learning.CSharp.DataRepositories
 {
@@ -22,7 +24,15 @@ namespace Learning.CSharp.DataRepositories
         }
 
         #region Properties.
-        public IEnumerable<Product> List { get; }
+
+        public List<Product> List
+        {
+            get
+            {
+                var filter = Builders<Product>.Filter.Exists("_id");
+                return _productsContext.Products.FindAsync(filter).Result.ToListAsync().Result; ; 
+            }
+        }
         #endregion
 
         #region Methods
@@ -34,17 +44,17 @@ namespace Learning.CSharp.DataRepositories
 
         public void Delete(Product entity)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void Update(Product entity)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public Task<Product> FindById(string id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
         #endregion
     }

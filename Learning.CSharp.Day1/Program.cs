@@ -1,7 +1,6 @@
 ﻿using System;
 using Learning.CSharp.DataModels;
 using Learning.CSharp.DataRepositories;
-using Learning.CSharp.MongoDbDataStore;
 using Learning.CSharp.Utilities;
 
 namespace Learning.CSharp.Day1
@@ -15,13 +14,14 @@ namespace Learning.CSharp.Day1
             {
                 var startTime = DateTime.UtcNow;
                 var productsRepository = new ProductsRepository();
-
+                var currencyGenerator = new CurrencyGenerator();
+                
                 for (var iCtr = 0; iCtr <= 10; iCtr++)
                 {
                     var product = new Product
                     {
                         Name = NameGenerator.GenerateName(),
-                        Price = 102.3M
+                        Price = currencyGenerator.GenerateAmount()
                     };
                     Console.WriteLine("{0}. Creating new Product {1}", iCtr, product.Name);
                     productsRepository.Add(product).Wait();

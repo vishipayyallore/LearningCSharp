@@ -9,7 +9,7 @@ namespace Learning.CSharp.IDataRepositories
     public interface IRepository<T> where T : IEntity
     {
         #region Properties
-        IEnumerable<T> List { get; }
+        List<T>  List { get; }
         #endregion
 
         #region Methods
