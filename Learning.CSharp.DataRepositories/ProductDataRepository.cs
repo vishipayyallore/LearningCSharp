@@ -30,7 +30,7 @@ namespace Learning.CSharp.DataRepositories
             get
             {
                 var filter = Builders<Product>.Filter.Exists("_id");
-                return _productsContext.Products.FindAsync(filter).Result.ToListAsync().Result; ; 
+                return _productsContext.Products.FindAsync(filter).Result.ToListAsync().Result; 
             }
         }
         #endregion
