@@ -29,9 +29,9 @@ namespace Learning.CSharp.Day1.Sample1
             return this;
         }
 
-        public ProdcutsDemo1 SortAndDisplayProducts()
+        public ProdcutsDemo1 SortAndDisplayProducts(IComparer comparer)
         {
-            _products.Sort(new ProductNameComparer());
+            _products.Sort(comparer);
             Console.WriteLine("\n\n");
             foreach (var product in _products)
             {

@@ -1,8 +1,5 @@
 ﻿using System;
-using Learning.CSharp.DataModels;
-using Learning.CSharp.DataRepositories;
 using Learning.CSharp.Day1.Sample1;
-using Learning.CSharp.Utilities;
 
 namespace Learning.CSharp.Day1
 {
@@ -16,13 +13,17 @@ namespace Learning.CSharp.Day1
                 var prodcutsDemo1 = new ProdcutsDemo1();
                 prodcutsDemo1
                     .GenerateProducts()
-                    .SortAndDisplayProducts()
+                    .SortAndDisplayProducts(new ProductNameComparer())
+                    .SortAndDisplayProducts(new ProductPriceComparer())
                     .GenerateProducts(x => x.Price > 2000.0M && x.Price<3000.0M)
-                    .SortAndDisplayProducts()
+                    .SortAndDisplayProducts(new ProductNameComparer())
+                    .SortAndDisplayProducts(new ProductPriceComparer())
                     .GenerateProducts(x => x.Price > 2500.0M && x.Price < 3000.0M)
-                    .SortAndDisplayProducts()
+                    .SortAndDisplayProducts(new ProductNameComparer())
+                    .SortAndDisplayProducts(new ProductPriceComparer())
                     .GenerateProducts(x => x.Price > 2800.0M && x.Price < 3000.0M)
-                    .SortAndDisplayProducts();
+                    .SortAndDisplayProducts(new ProductNameComparer())
+                    .SortAndDisplayProducts(new ProductPriceComparer());
             }
             catch (Exception errorObject)
             {
