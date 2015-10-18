@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections;
-using System.Linq;
 using Learning.CSharp.DataModels;
-using Learning.CSharp.DataRepositories;
+using Learning.CSharp.Day1.Infrastructure;
 
-namespace Learning.CSharp.Day1.Sample1
+namespace Learning.CSharp.Day1.Samples
 {
     public class ProdcutsDemo1
     {
@@ -22,10 +21,7 @@ namespace Learning.CSharp.Day1.Sample1
         public ProdcutsDemo1 GenerateProducts(Func<Product, bool> action  = null)
         {
             _products = new ArrayList();
-            var productsRepository = new ProductsRepository();
-            _products.AddRange(action == null
-                ? productsRepository.List.Result
-                : productsRepository.GetPrdocuts(action).ToList());
+            _products.AddRange(ProductsHelper.RetrieveProducts((action)));
             return this;
         }
 
