@@ -57,11 +57,8 @@ namespace Learning.CSharp.DataRepositoriesTests
         [TestMethod]
         public void When_ProductsList_Greaterthan500_IsRetrieved()
         {
-            var productsArrayList = new ArrayList();
             var productsRepository = new ProductsRepository();
             var results = productsRepository.GetPrdocuts(x => (x.Price > 1800 && x.Price<3000));
-            //var refined = results.Where(x => x.Price > 700).ToList();
-            //productsArrayList.AddRange(results);
             foreach (var product in results)
             {
                 Console.WriteLine(product.ToString());

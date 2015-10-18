@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Learning.CSharp.DataModels;
 
 namespace Learning.CSharp.Day1.Sample1
@@ -8,10 +9,12 @@ namespace Learning.CSharp.Day1.Sample1
         public int Compare(object x, object y)
         {
             var product1 = x as Product;
+            if (product1 == null)
+                return -1;
             var product2 = y as Product;
-            //Console.WriteLine($"{product1.Name} -> {product2.Name}");
-            return product1.Name.CompareTo(product2.Name);
-            
+            if (product2 == null)
+                return -1;
+            return string.Compare(product1.Name, product2.Name, StringComparison.Ordinal);
         }
     }
 }
