@@ -17,8 +17,7 @@ namespace Learning.CSharp.MongoDbDataStore
         public ProductsContext()
         {
             _productsCollectionName = ConfigurationHelper.GetConfigurationValue("ProductsCollectionName");
-            var mongoDataStoreInstance = MongoDataStore.DataStoreInstance;
-            _mongoDatabase = mongoDataStoreInstance.DatabaseInstance;
+            _mongoDatabase = MongoDataStoreInstance.DatabaseInstance;
         }
 
         #region Properties

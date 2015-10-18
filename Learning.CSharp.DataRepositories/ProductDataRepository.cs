@@ -11,25 +11,21 @@ namespace Learning.CSharp.DataRepositories
 
     public class ProductsRepository : IRepository<Product>
     {
-
+        #region Variables.
         private readonly ProductsContext _productsContext;
+        #endregion
 
         public ProductsRepository()
         {
-            try
-            {
-                //TODO: Using Dependency Injenction
-                _productsContext = new ProductsContext();
-            }
-            catch (Exception errorObject)
-            {
-                Console.WriteLine("\nError: {0}", errorObject.Message);
-            }
-            
+            //TODO: Using Dependency Injenction
+            _productsContext = new ProductsContext();
         }
 
+        #region Properties.
         public IEnumerable<Product> List { get; }
+        #endregion
 
+        #region Methods
         public async Task<HttpStatusCode> Add(Product entity)
         {
             await _productsContext.Products.InsertOneAsync(entity);
@@ -50,6 +46,7 @@ namespace Learning.CSharp.DataRepositories
         {
             throw new System.NotImplementedException();
         }
+        #endregion
     }
 
 }

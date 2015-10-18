@@ -16,21 +16,13 @@ namespace Learning.CSharp.MongoStore
 
         static MongoDataStore()
         {
-            try
-            {
-                var mongoDbConnectionString = ConfigurationHelper.GetConfigurationValue("MongoDbConnectionString");
-                Console.WriteLine(mongoDbConnectionString);
-                DataStoreClient = new MongoClient(mongoDbConnectionString);
+            var mongoDbConnectionString = ConfigurationHelper.GetConfigurationValue("MongoDbConnectionString");
+            Console.WriteLine(mongoDbConnectionString);
+            DataStoreClient = new MongoClient(mongoDbConnectionString);
 
-                //Data Base
-                var mongoDbDatabaseName = ConfigurationHelper.GetConfigurationValue("MongoDbDatabaseName");
-                DesignPatternDatabase = DataStoreClient.GetDatabase(mongoDbDatabaseName);
-            }
-            catch (Exception errorObject)
-            {
-                Console.WriteLine("\nError: {0}", errorObject.Message);
-            }
-            
+            //Data Base
+            var mongoDbDatabaseName = ConfigurationHelper.GetConfigurationValue("MongoDbDatabaseName");
+            DesignPatternDatabase = DataStoreClient.GetDatabase(mongoDbDatabaseName);
         }
 
         #region Properties

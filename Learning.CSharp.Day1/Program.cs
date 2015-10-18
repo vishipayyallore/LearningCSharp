@@ -16,7 +16,7 @@ namespace Learning.CSharp.Day1
                 var startTime = DateTime.UtcNow;
                 var productsRepository = new ProductsRepository();
 
-                for (var iCtr = 0; iCtr <= 10000; iCtr++)
+                for (var iCtr = 0; iCtr <= 10; iCtr++)
                 {
                     var product = new Product
                     {

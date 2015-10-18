@@ -28,3 +28,8 @@
 /Learning.CSharp.IDataRepositories/bin/Debug
 /Learning.CSharp.MongoDbDataStore/bin/Debug
 /Learning.CSharp.MongoStore/bin/Debug
+/Learning.CSharp.DataModels/packages.config
+/Learning.CSharp.DataRepositoriesTests/bin/Debug
+/Learning.CSharp.UtilitiesTests/bin/Debug
+/Learning.CSharp.DataRepositoriesTests/obj/Debug
+/Learning.CSharp.UtilitiesTests/obj/Debug

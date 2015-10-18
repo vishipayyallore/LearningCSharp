@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.CSharp.MongoStore"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.CSharp.MongoDbDataStore", "Learning.CSharp.MongoDbDataStore\Learning.CSharp.MongoDbDataStore.csproj", "{1DCBF0B5-DF35-4B24-96C6-44C623E8F62F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.CSharp.DataRepositoriesTests", "Learning.CSharp.DataRepositoriesTests\Learning.CSharp.DataRepositoriesTests.csproj", "{2090B590-E4B5-47CB-9F29-8E86766E6F18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.CSharp.UtilitiesTests", "Learning.CSharp.UtilitiesTests\Learning.CSharp.UtilitiesTests.csproj", "{F0C16491-D7C8-4E0F-BB88-0AEF8CB643B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +69,14 @@ Global
 		{1DCBF0B5-DF35-4B24-96C6-44C623E8F62F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DCBF0B5-DF35-4B24-96C6-44C623E8F62F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DCBF0B5-DF35-4B24-96C6-44C623E8F62F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2090B590-E4B5-47CB-9F29-8E86766E6F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2090B590-E4B5-47CB-9F29-8E86766E6F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2090B590-E4B5-47CB-9F29-8E86766E6F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2090B590-E4B5-47CB-9F29-8E86766E6F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0C16491-D7C8-4E0F-BB88-0AEF8CB643B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0C16491-D7C8-4E0F-BB88-0AEF8CB643B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0C16491-D7C8-4E0F-BB88-0AEF8CB643B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0C16491-D7C8-4E0F-BB88-0AEF8CB643B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,5 +90,7 @@ Global
 		{A86AEA07-D417-412B-99F2-8ADE53F3695D} = {DEB27226-5804-491A-A22F-6671D001E78B}
 		{956C81BC-D65D-4A53-9C76-AB619D46C606} = {DEB27226-5804-491A-A22F-6671D001E78B}
 		{1DCBF0B5-DF35-4B24-96C6-44C623E8F62F} = {DEB27226-5804-491A-A22F-6671D001E78B}
+		{2090B590-E4B5-47CB-9F29-8E86766E6F18} = {DEB27226-5804-491A-A22F-6671D001E78B}
+		{F0C16491-D7C8-4E0F-BB88-0AEF8CB643B0} = {7360EA0E-F8B2-433E-AFB8-3640A8E3DE59}
 	EndGlobalSection
 EndGlobal
