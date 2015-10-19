@@ -36,6 +36,7 @@ namespace Learning.CSharp.Day1
             Console.Read();
         }
 
+        #region Private Methods
         private static void RunProductsDemo1(ProdcutsDemo1 prodcutsDemo1, Func<Product, bool> action = null)
         {
             if (action != null)
@@ -58,17 +59,21 @@ namespace Learning.CSharp.Day1
             if (action != null)
             {
                 prodcutsDemo.GenerateProducts(action)
-                    .SortAndDisplayProducts(new ProductNameComparerV2());
-                    //.SortAndDisplayProducts(new ProductPriceComparer());
+                    .SortAndDisplayProducts(new ProductNameComparerV2())
+                    .SortAndDisplayProducts(new ProductPriceComparerV2())
+                    .SortAndDisplayProducts();
             }
             else
             {
                 prodcutsDemo
                     .GenerateProducts()
-                    .SortAndDisplayProducts(new ProductNameComparerV2());
-                    //.SortAndDisplayProducts(new ProductPriceComparer());
+                    .SortAndDisplayProducts(new ProductNameComparerV2())
+                    .SortAndDisplayProducts(new ProductPriceComparerV2())
+                    .SortAndDisplayProducts();
             }
         }
+        #endregion
+
     }
 
 }

@@ -35,6 +35,17 @@ namespace Learning.CSharp.Day1.Samples
             }
             return this;
         }
+
+        public ProdcutsDemo2 SortAndDisplayProducts()
+        {
+            _products.Sort((product1, product2) => product1.Price.CompareTo(product2.Price));
+            Console.WriteLine("\n\n");
+            foreach (var product in _products)
+            {
+                Console.WriteLine(product);
+            }
+            return this;
+        }
         #endregion
 
     }

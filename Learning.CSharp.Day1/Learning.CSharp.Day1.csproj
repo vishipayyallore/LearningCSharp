@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Infrastructure\ProductNameComparerV2.cs" />
+    <Compile Include="Infrastructure\ProductPriceComparerV2.cs" />
     <Compile Include="Infrastructure\ProductsHelper.cs" />
     <Compile Include="ProductsMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
